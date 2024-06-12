@@ -10,6 +10,7 @@
 2. Community Posts:
     - Post Title
     - Post Comments
+    - Category
     - Author
     - Date Created
     - Biddings
