@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    # css 
+    'compressor',
     # rest framework
     'rest_framework',
     # homifyMVP apps
@@ -137,6 +139,7 @@ USE_TZ = True
 # Media files
 
 MEDIA_URL = 'media/'
+
 MEDIA_ROOT = BASE_DIR / 'media'
 
 # Static files (CSS, JavaScript, Images)
@@ -145,6 +148,15 @@ MEDIA_ROOT = BASE_DIR / 'media'
 STATIC_URL = 'static/'
 
 STATIC_ROOT = BASE_DIR / 'static'
+
+# Compressor
+
+COMPRESS_ROOT = BASE_DIR / 'static'
+
+COMPRESS_ENABLED = True
+
+STATICFILES_FINDERS = ('compressor.finders.CompressorFinder',)
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
